@@ -6,18 +6,19 @@ export default function Section2(){
     return(
         <View style={estilos.container}>
 
-            <View style={estilos.mid}>
-                <View style={estilos.quadradoVermelho}></View>
-                <View style={estilos.quadradoVerde}></View>
-                <View style={estilos.quadradoAzul}></View>
-            </View>
+            <View style={estilos.quadradoVermelho}></View>
+            <View style={estilos.quadradoVerde}></View>
+            <View style={estilos.quadradoAzul}></View>
 
         </View>
 
 
     );
 }
-
+const redPosition = {
+    x: 200,
+    y: 150
+}
 const estilos = StyleSheet.create({
     container: {
         backgroundColor: '#EEE',
@@ -27,19 +28,13 @@ const estilos = StyleSheet.create({
         justifyContent: 'center'
     
     },
-    mid:{
-        borderStyle: "dashed",
-        borderColor: 'black',
-        borderWidth: 2,
-        width: '70%',
-        height: '70%'
-    },
     quadradoVermelho: {
         width: 50,
         height: 50,
         backgroundColor: '#A20202',
         position: 'absolute',
-        top: 0,
+        top: redPosition.y,
+        left: redPosition.x,
         zIndex: 1
         
     },
@@ -48,8 +43,8 @@ const estilos = StyleSheet.create({
         height: 50,
         backgroundColor: '#02FA2F',
         position: 'absolute',
-        top: 0,
-        left: 10,
+        top: redPosition.y,
+        left: redPosition.x - 10,
         zIndex: 2
 
     },
@@ -58,7 +53,8 @@ const estilos = StyleSheet.create({
         height: 50,
         backgroundColor: '#00AAFF',
         position: 'absolute',
-        top: 40,
+        top: redPosition.y + 40,
+        left: redPosition.x, 
         zIndex: 0
     }
     
